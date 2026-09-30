@@ -67,10 +67,11 @@
         play = $('#simPlay'), slider = $('#simSlider'), fill = $('#simFill'), caption = $('#simCaption'), modes = $('#simModes');
 
     var N = 40;
-    var PHASES = [ /* first and last sampling step of each phase (Figure 1: boundaries near steps 10 and 35) */
-      { name: 'Phase 1', short: 'P1', from: 0, to: 9, cls: 'p1' },
-      { name: 'Phase 2', short: 'P2', from: 10, to: 34, cls: 'p2' },
-      { name: 'Phase 3', short: 'P3', from: 35, to: 39, cls: 'p3' }
+    var PHASES = [ /* first and last sampling step of each phase, as the repository's router assigns the 40 calls
+                      (BlockwiseEDMStudent, FFHQ-64 phases [0, 3), [3, 16), [16, 20)); Figure 1 shows steps 10 and 35 */
+      { name: 'Phase 1', short: 'P1', from: 0, to: 10, cls: 'p1' },
+      { name: 'Phase 2', short: 'P2', from: 11, to: 35, cls: 'p2' },
+      { name: 'Phase 3', short: 'P3', from: 36, to: 39, cls: 'p3' }
     ];
     /* Illustrative only: share of the stored budget per student and relative layer widths. */
     var SHARE = [0.22, 0.53, 0.25];

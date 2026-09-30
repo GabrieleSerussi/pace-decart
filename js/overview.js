@@ -24,7 +24,7 @@
   /* ------------------------------------------------------------------ */
   var LAYERS = 4, PER = 4, G = LAYERS * PER, T = 20;
   var PHASES = [[0, 3], [3, 16], [16, 20]];
-  var STEP_PHASES = [[0, 10], [10, 35], [35, 40]]; /* the same phases on the 40 sampler steps of Figure 1 */
+  var STEP_PHASES = [[0, 11], [11, 36], [36, 40]]; /* the same phases on the 40 sampler steps, as the repository's router assigns them */
   function phaseOf(t) { for (var k = 0; k < PHASES.length; k++) if (t >= PHASES[k][0] && t < PHASES[k][1]) return k; return 0; }
   function stepPhase(s) { for (var k = 0; k < STEP_PHASES.length; k++) if (s >= STEP_PHASES[k][0] && s < STEP_PHASES[k][1]) return k; return 2; }
   function rnd(i) { var x = Math.sin(i * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); }
